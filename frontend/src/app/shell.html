@@ -1,0 +1,27 @@
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="wordmark" routerLink="/" aria-label="Indalium home"><img class="brand-logo" src="/images/logo-icon96.webp" alt="" width="48" height="48"><span><strong>INDALIUM</strong><small>ROOFING SYSTEMS</small></span></a>
+    <button class="menu-toggle" type="button" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen" aria-controls="primary-navigation" aria-label="Toggle navigation"><span></span><span></span></button>
+    <nav id="primary-navigation" class="primary-navigation" [class.is-open]="menuOpen" aria-label="Main navigation">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" (click)="closeMenu()">Home</a>
+      <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About Us</a>
+      <a routerLink="/products" routerLinkActive="active" (click)="closeMenu()">Products</a>
+      <a routerLink="/services" routerLinkActive="active" (click)="closeMenu()">Services</a>
+      <a routerLink="/projects" routerLinkActive="active" (click)="closeMenu()">Projects</a>
+      <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a>
+      <div class="nav-actions"><a class="nav-whatsapp" href="" (click)="whatsapp.open($event)">WhatsApp</a><a class="button button-small button-blue" routerLink="/contact" (click)="closeMenu()">Contact us <span aria-hidden="true">↗</span></a></div>
+    </nav>
+  </div>
+</header>
+<main id="main-content"><router-outlet /></main>
+<footer class="site-footer">
+  <div class="footer-main page-width">
+    <div class="footer-about"><a class="wordmark wordmark-light" routerLink="/"><img class="brand-logo" src="/images/logo-icon96.webp" alt="" width="48" height="48"><span><strong>INDALIUM</strong><small>ROOFING SYSTEMS</small></span></a><p>Roofing and cladding solutions for the places we build, work and call home.</p><a class="footer-whatsapp" href="" (click)="whatsapp.open($event)">Start a WhatsApp enquiry <span aria-hidden="true">↗</span></a></div>
+    <div class="footer-column"><h2>Company</h2><a routerLink="/about">About us</a><a routerLink="/projects">Projects</a><a routerLink="/services">Services</a></div>
+    <div class="footer-column"><h2>Products</h2><a routerLink="/products">All products</a><a routerLink="/products/tranquillo">Sandwich roof panels</a><a routerLink="/products/farrago">Tile profile sheets</a><a routerLink="/products/trapezoidal-profile">Trapezoidal sheets</a></div>
+    <div class="footer-column"><h2>Get in touch</h2><a routerLink="/contact">Contact details to be added</a><p>Kerala, India</p></div>
+  </div>
+  <div class="footer-bottom page-width"><span>© 2026 Indalium. All rights reserved.</span><span>Roofing and cladding solutions</span></div>
+</footer>
+<a class="floating-whatsapp" href="" (click)="whatsapp.open($event)" aria-label="Chat with us on WhatsApp" title="Chat with us on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.2 1.6 6L0 24l6.3-1.7a12 12 0 0 0 5.8 1.5h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.2-3.5-8.5ZM12.1 21.8a10 10 0 0 1-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.8 9.8 0 1 1 8.4 4.6Zm5.4-7.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.7.1-.3-.2-1.2-.5-2.3-1.5-.9-.8-1.5-1.7-1.7-2-.2-.3 0-.5.1-.6l.5-.6.3-.5c.1-.2 0-.4 0-.6-.1-.2-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.5s1.1 2.8 1.3 3c.2.2 2.2 3.4 5.3 4.7.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.5Z"/></svg></a>
